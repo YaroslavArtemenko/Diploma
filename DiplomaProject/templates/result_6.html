@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+
+ <table class="table">
+     <thread class = "thead-dark">
+         {% for table in tables %}
+
+         <tr>
+             <td scope="row">{{ table|safe }}</td>
+         </tr>
+         {% endfor %}
+
+     </thread>
+ </table>
+
+{% endblock %}

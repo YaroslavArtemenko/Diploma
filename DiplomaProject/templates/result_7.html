@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div>
+    <img src="static\images\dendrogram.png" style="height:100%; width: 100%"/>
+</div>
+
+<div>
+    <table class="table">
+        <thread class = "thead-dark">
+            <tr>
+                <th scope="col">Number of Cluster</th>
+                <th scope="col">Countries</th>
+             </tr>
+        {% for item in result %}
+        <tr>
+            <td scope="row">{{loop.index}}</td>
+            <td scope="row">{{item}}</td>
+            <td>
+                <a id = {{loop.index}} href="/show/{{loop.index}}" type="button" class="btn btn-outline-info">Show</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </thread>
+    </table>
+</div>
+
+{% endblock %}
